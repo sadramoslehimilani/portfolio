@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
     <header>
@@ -23,7 +24,9 @@
           <div class="hero__content">
             <div class="hero__text">
               <h1 class="hero__title">
-                Hi, my name is <span class="hero__name">Sadra</span>.
+                <span class="typing-container">
+                  <span class="typing-text"></span><span class="cursor">|</span>
+                </span>
               </h1>
               <p class="hero__description">
                 I am a freelance software developer located in Sydney, Australia
@@ -57,8 +60,8 @@
       <!-- Footer content will go here -->
     </footer>
 
-    <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/utils.js"></script>
   </body>
 </html>

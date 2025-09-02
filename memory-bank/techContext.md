@@ -30,10 +30,10 @@
 
 ### Core Dependencies
 
-- **Google Fonts (Inter)**: Typography enhancement with weights 300-700
-- **GSAP Core**: Animation library core functionality (planned)
-- **GSAP ScrollTrigger**: Scroll-based animation plugin (planned)
-- **GSAP TextPlugin**: Text animation capabilities (if needed)
+- **Google Fonts (Inter)**: Typography enhancement with weights 300-700 ✅
+- **GSAP Core**: Animation library core functionality ✅ (CDN: 3.12.2)
+- **GSAP ScrollTrigger**: Scroll-based animation plugin (planned for future sections)
+- **GSAP TextPlugin**: Text animation capabilities (not needed - custom implementation used)
 
 ### Development Dependencies
 
@@ -45,9 +45,10 @@
 
 - **File Organization**: Clear separation of concerns with dedicated folders for CSS, JS, and assets
 - **CSS Methodology**: BEM naming convention with custom properties for theming
-- **JavaScript Patterns**: Module pattern for organization, event delegation for performance
-- **Performance Optimization**: Minimize reflows, optimize animations, lazy loading where appropriate
-- **Accessibility**: Semantic HTML, proper ARIA attributes, keyboard navigation support
+- **JavaScript Patterns**: Module pattern for organization, GSAP timeline management, event delegation for performance
+- **Animation Architecture**: GSAP for professional animations, CSS for simple transitions
+- **Performance Optimization**: Minimize reflows, optimize animations with transform/opacity, lazy loading where appropriate
+- **Accessibility**: Semantic HTML, proper ARIA attributes, keyboard navigation support, prefers-reduced-motion handling
 - **Responsive Design**: Mobile-first approach with CSS media queries and flexible units
 
 ## Development Workflow
@@ -69,6 +70,8 @@
 
 - **Asset Optimization**: Compressed images and minimal CSS/JS
 - **Critical Rendering Path**: Optimized CSS delivery and minimal blocking resources
-- **Animation Performance**: Using transform and opacity for smooth animations
+- **Animation Performance**: Using GSAP with transform and opacity for smooth 60fps animations
+- **GSAP Optimization**: Timeline management, proper cleanup, and efficient animation patterns
 - **Lazy Loading**: Implement where appropriate for images and content
 - **Caching**: Leverage browser caching through proper HTTP headers
+- **Animation Accessibility**: Respect prefers-reduced-motion for inclusive design

@@ -45,7 +45,10 @@ sadra-portfolio/
 index.html
 ├── Header/Navigation (pending)
 ├── Hero Section ✅ (implemented)
-│   ├── hero__content (text content)
+│   ├── hero__content (text content with GSAP typing animation)
+│   │   ├── typing-container (animation wrapper)
+│   │   ├── typing-text (animated text content)
+│   │   └── cursor (blinking cursor effect)
 │   └── hero__photo (image with hover effects)
 ├── About Section (pending)
 ├── Projects Section (pending)
@@ -57,15 +60,18 @@ index.html
 ### Hero Section Architecture
 - **Layout**: CSS Grid for desktop (50/50), Flexbox for mobile (stacked)
 - **Typography**: Inter font family with weights 300-700
+- **Animation**: GSAP typing animation with cursor blinking effect
 - **Responsive Design**: Mobile-first approach with breakpoints
 - **Accessibility**: Focus states, reduced motion support, high contrast compatibility
-- **Performance**: Optimized image loading with hover effects
+- **Performance**: Optimized image loading with hover effects, efficient GSAP animations
 
 ### CSS Organization
-- **styles.css**: Base styles and desktop layouts
+- **styles.css**: Base styles, desktop layouts, and animation styles
 - **responsive.css**: Mobile-first responsive breakpoints
-- **BEM-style naming**: `.hero`, `.hero__content`, `.hero__photo`
+- **BEM-style naming**: `.hero`, `.hero__content`, `.hero__photo`, `.typing-container`
+- **Animation Classes**: `.typing-text`, `.cursor`, `@keyframes blink`
 - **Custom Properties**: CSS variables for consistent theming
+- **Accessibility**: `@media (prefers-reduced-motion)` support
 styles.css
 ├── Global Styles (typography, colors, reset)
 ├── Layout Components (grid, flexbox utilities)
@@ -78,11 +84,12 @@ main.js
 ├── Scroll Position Management
 └── Event Listeners
 
-animations.js
-├── GSAP Timeline Setup
-├── Scroll-Triggered Animations
-├── Text Reveal Effects
-└── Interactive Element Animations
+animations.js ✅ (implemented)
+├── GSAP Typing Animation (`initTypingAnimation`)
+├── Cursor Blinking Effects
+├── Text Styling and Formatting
+├── Accessibility Support (prefers-reduced-motion)
+└── DOM Ready Initialization
 ```
 
 ## Critical Implementation Paths

@@ -50,9 +50,29 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-.hero__name {
+/* Typing Animation Styles */
+.typing-container {
+  display: inline-block;
+}
+
+.typing-text {
+  color: #2c3e50;
+}
+
+.cursor {
   color: #3498db;
-  position: relative;
+  font-weight: 400;
+  margin-left: 2px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
 }
 
 .hero__description {
@@ -96,6 +116,15 @@ body {
 
   .hero__photo:hover {
     transform: none;
+  }
+
+  .cursor {
+    animation: none;
+    opacity: 1;
+  }
+
+  .typing-text::after {
+    content: "Hi, my name is Sadra.";
   }
 }
 
