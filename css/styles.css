@@ -1,0 +1,115 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #e9e3e3;
+}
+
+/* Container */
+.hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.hero__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #2c3e50;
+  font-family: "Inter", sans-serif;
+}
+
+.hero__name {
+  color: #3498db;
+  position: relative;
+}
+
+.hero__description {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #7f8c8d;
+  line-height: 1.6;
+  max-width: 500px;
+  font-family: "Inter", sans-serif;
+}
+
+.hero__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__photo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.hero__photo:hover {
+  transform: translateY(-5px);
+}
+
+/* Accessibility Improvements */
+.hero__photo:focus {
+  outline: 3px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .hero__photo {
+    transition: none;
+  }
+
+  .hero__photo:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .hero__title {
+    color: #000;
+  }
+
+  .hero__name {
+    color: #0066cc;
+  }
+
+  .hero__description {
+    color: #333;
+  }
+}

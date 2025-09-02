@@ -43,12 +43,29 @@ sadra-portfolio/
 
 ```
 index.html
-├── Header/Navigation
-├── Hero Section
-├── About Section
-├── Projects Section
-└── Contact Section
+├── Header/Navigation (pending)
+├── Hero Section ✅ (implemented)
+│   ├── hero__content (text content)
+│   └── hero__photo (image with hover effects)
+├── About Section (pending)
+├── Projects Section (pending)
+└── Contact Section (pending)
+```
 
+## Implemented Patterns
+
+### Hero Section Architecture
+- **Layout**: CSS Grid for desktop (50/50), Flexbox for mobile (stacked)
+- **Typography**: Inter font family with weights 300-700
+- **Responsive Design**: Mobile-first approach with breakpoints
+- **Accessibility**: Focus states, reduced motion support, high contrast compatibility
+- **Performance**: Optimized image loading with hover effects
+
+### CSS Organization
+- **styles.css**: Base styles and desktop layouts
+- **responsive.css**: Mobile-first responsive breakpoints
+- **BEM-style naming**: `.hero`, `.hero__content`, `.hero__photo`
+- **Custom Properties**: CSS variables for consistent theming
 styles.css
 ├── Global Styles (typography, colors, reset)
 ├── Layout Components (grid, flexbox utilities)

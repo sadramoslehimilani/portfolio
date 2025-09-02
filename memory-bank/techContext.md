@@ -30,8 +30,9 @@
 
 ### Core Dependencies
 
-- **GSAP Core**: Animation library core functionality
-- **GSAP ScrollTrigger**: Scroll-based animation plugin
+- **Google Fonts (Inter)**: Typography enhancement with weights 300-700
+- **GSAP Core**: Animation library core functionality (planned)
+- **GSAP ScrollTrigger**: Scroll-based animation plugin (planned)
 - **GSAP TextPlugin**: Text animation capabilities (if needed)
 
 ### Development Dependencies
