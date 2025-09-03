@@ -31,8 +31,10 @@
 ### Core Dependencies
 
 - **Google Fonts (Inter)**: Typography enhancement with weights 300-700 ✅
-- **GSAP Core**: Animation library core functionality ✅ (CDN: 3.12.2)
-- **GSAP ScrollTrigger**: Scroll-based animation plugin (planned for future sections)
+- **GSAP Core**: Animation library core functionality ✅ (CDN: 3.13.0)
+- **GSAP ScrollTrigger**: Scroll-based animation plugin ✅ (CDN: 3.13.0, used for About section Lottie integration)
+- **GSAP ScrollSmoother**: Enhanced smooth scrolling plugin ✅ (CDN: 3.13.0, for all interaction types)
+- **Lottie Web**: Rich animation library for After Effects animations ✅ (CDN: 5.12.2)
 - **GSAP TextPlugin**: Text animation capabilities (not needed - custom implementation used)
 
 ### Development Dependencies
