@@ -150,7 +150,7 @@ function initAboutAnimations() {
       renderer: "svg",
       loop: true,
       autoplay: false,
-      path: "/assets/animations/web-design-animation.json",
+      path: "assets/animations/web-design-animation.json",
     });
   }
 
