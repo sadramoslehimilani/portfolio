@@ -196,6 +196,87 @@ function initAboutAnimations() {
 }
 
 /**
+ * Initialize Showcase section animations
+ * Handles staggered reveal animations for project items
+ */
+function initShowcaseAnimations() {
+  const showcaseItems = document.querySelectorAll(".showcase__item");
+
+  if (!showcaseItems.length) return;
+
+  // Check for reduced motion preference
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (prefersReducedMotion) {
+    // Show all items immediately for users who prefer reduced motion
+    showcaseItems.forEach((item) => {
+      item.classList.add("animate-in");
+    });
+    return;
+  }
+
+  // Create ScrollTrigger for each showcase item with staggered animation
+  showcaseItems.forEach((item, index) => {
+    ScrollTrigger.create({
+      trigger: item,
+      start: "top 85%",
+      onEnter: () => {
+        // Add staggered delay based on item index
+        setTimeout(() => {
+          item.classList.add("animate-in");
+        }, index * 200); // 200ms delay between each item
+      },
+      once: true, // Only trigger once
+    });
+  });
+
+  // Add hover effects for interactive elements
+  showcaseItems.forEach((item) => {
+    const image = item.querySelector(".showcase__image");
+    const links = item.querySelectorAll(".showcase__link");
+
+    // Enhanced hover effects for better interactivity
+    item.addEventListener("mouseenter", () => {
+      if (!prefersReducedMotion) {
+        gsap.to(item, {
+          y: -8,
+          duration: 0.3,
+          ease: "power2.out",
+        });
+
+        if (image) {
+          gsap.to(image, {
+            scale: 1.05,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        }
+      }
+    });
+
+    item.addEventListener("mouseleave", () => {
+      if (!prefersReducedMotion) {
+        gsap.to(item, {
+          y: 0,
+          duration: 0.3,
+          ease: "power2.out",
+        });
+
+        if (image) {
+          gsap.to(image, {
+            scale: 1,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        }
+      }
+    });
+  });
+}
+
+/**
  * Initialize animations when DOM is ready
  */
 document.addEventListener("DOMContentLoaded", function () {
@@ -204,6 +285,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize About Me animations
   initAboutAnimations();
+
+  // Initialize Showcase animations
+  initShowcaseAnimations();
 
   // Check if user prefers reduced motion
   const prefersReducedMotion = window.matchMedia(
@@ -241,5 +325,6 @@ if (typeof module !== "undefined" && module.exports) {
     initSmoothScrolling,
     initTypingAnimation,
     initAboutAnimations,
+    initShowcaseAnimations,
   };
 }
