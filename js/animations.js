@@ -277,6 +277,99 @@ function initShowcaseAnimations() {
 }
 
 /**
+ * Initializes scroll-triggered animations for the Hire section
+ * Animates title, description, and links with staggered timing
+ */
+function initHireAnimations() {
+  const hireSection = document.querySelector(".hire");
+  const hireTitle = document.querySelector(".hire__title");
+  const hireDescription = document.querySelector(".hire__description");
+  const hireLinks = document.querySelectorAll(".hire__link");
+
+  if (!hireSection) {
+    console.warn("Hire section not found");
+    return;
+  }
+
+  // Check for reduced motion preference
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (prefersReducedMotion) {
+    // For reduced motion users, show elements immediately
+    if (hireTitle) hireTitle.classList.add("visible");
+    if (hireDescription) hireDescription.classList.add("visible");
+    hireLinks.forEach((link) => link.classList.add("visible"));
+    return;
+  }
+
+  // Create ScrollTrigger for the hire section
+  ScrollTrigger.create({
+    trigger: hireSection,
+    start: "top 80%",
+    end: "bottom 20%",
+    onEnter: () => {
+      // Animate title
+      if (hireTitle) {
+        gsap.to(hireTitle, {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          onComplete: () => hireTitle.classList.add("visible"),
+        });
+      }
+
+      // Animate description with delay
+      if (hireDescription) {
+        gsap.to(hireDescription, {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          delay: 0.2,
+          ease: "power2.out",
+          onComplete: () => hireDescription.classList.add("visible"),
+        });
+      }
+
+      // Animate links with staggered timing
+      if (hireLinks.length > 0) {
+        gsap.to(hireLinks, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          delay: 0.4,
+          stagger: 0.1,
+          ease: "power2.out",
+          onComplete: () => {
+            hireLinks.forEach((link) => link.classList.add("visible"));
+          },
+        });
+      }
+    },
+    onLeave: () => {
+      // Optional: Reset animations when leaving section (for re-entry)
+      // Uncomment if you want animations to replay when scrolling back
+      /*
+      if (hireTitle) {
+        gsap.set(hireTitle, { opacity: 0, y: 30 });
+        hireTitle.classList.remove("visible");
+      }
+      if (hireDescription) {
+        gsap.set(hireDescription, { opacity: 0, y: 30 });
+        hireDescription.classList.remove("visible");
+      }
+      hireLinks.forEach((link) => {
+        gsap.set(link, { opacity: 0, y: 30 });
+        link.classList.remove("visible");
+      });
+      */
+    },
+  });
+}
+
+/**
  * Initialize animations when DOM is ready
  */
 document.addEventListener("DOMContentLoaded", function () {
@@ -288,6 +381,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize Showcase animations
   initShowcaseAnimations();
+
+  // Initialize Hire animations
+  initHireAnimations();
 
   // Check if user prefers reduced motion
   const prefersReducedMotion = window.matchMedia(
@@ -326,5 +422,6 @@ if (typeof module !== "undefined" && module.exports) {
     initTypingAnimation,
     initAboutAnimations,
     initShowcaseAnimations,
+    initHireAnimations,
   };
 }

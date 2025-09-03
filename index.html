@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="icon" href="assets/favicon/favicon.ico">
+    
     <title>Sadra Milani - Developer Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,195 +35,321 @@
         </header>
 
         <main>
-      <section id="hero" class="hero">
-        <div class="hero__container">
-          <div class="hero__content">
-            <div class="hero__text">
-              <h1 class="hero__title">
-                <span class="typing-container">
-                  <span class="typing-text"></span><span class="cursor">|</span>
-                </span>
-              </h1>
-              <p class="hero__description">
-                I'm a full-stack developer who builds fast, scalable, and
-                user-friendly web applications.
-              </p>
-              <div class="hero__scroll-hint">
-                <span class="scroll-text">Scroll</span>
-                <div class="scroll-line"></div>
-              </div>
-            </div>
-            <div class="hero__image">
-              <img
-                src="assets/images/sadra.png"
-                alt="Sadra Milani - Software Developer"
-                class="hero__photo"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="about">
-        <div class="container">
-          <h2 class="about__title">A Little About Me</h2>
-          <div class="about__container">
-            <div class="about__bio">
-              <p class="about__description">
-                I'm a full-stack developer passionate about crafting clean,
-                efficient, and user-friendly web applications. I enjoy turning
-                ideas into real products with modern tools and frameworks. My
-                focus is on writing maintainable code, building smooth user
-                experiences, and continuously learning new technologies. When I
-                work on a project, I aim to blend functionality with simplicity.
-              </p>
-            </div>
-            <div class="about__animation">
-              <div id="lottie-animation" class="lottie-container"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="showcase">
-        <div class="container">
-          <div class="showcase__header">
-            <h2 class="showcase__title">A Peek at My Work</h2>
-          </div>
-          
-          <div class="showcase__grid">
-            <!-- Project 1: Javan Motors Group -->
-            <article class="showcase__item" data-project="javan-motors">
-              <div class="showcase__image-container">
-                <img 
-                  src="assets/images/showcase1.png" 
-                  alt="Javan Motors Group - Luxury car dealership website screenshot"
-                  class="showcase__image"
-                  loading="lazy"
-                />
-              </div>
-              <div class="showcase__content">
-                <h3 class="showcase__project-title">Javan Motors Group</h3>
-                <p class="showcase__description">
-                  A sleek website for a luxury car dealership specializing in buying and selling second-hand high-end vehicles. Built with a focus on performance and modern UI.
-                </p>
-                <div class="showcase__tech-stack">
-                  <span class="showcase__tech-label">Tech Stack:</span>
-                  <ul class="showcase__tech-list">
-                    <li class="showcase__tech-item">Next.js</li>
-                    <li class="showcase__tech-item">React</li>
-                    <li class="showcase__tech-item">Tailwind CSS</li>
-                  </ul>
+          <section id="hero" class="hero">
+            <div class="hero__container">
+              <div class="hero__content">
+                <div class="hero__text">
+                  <h1 class="hero__title">
+                    <span class="typing-container">
+                      <span class="typing-text"></span
+                      ><span class="cursor">|</span>
+                    </span>
+                  </h1>
+                  <p class="hero__description">
+                    I'm a full-stack developer who builds fast, scalable, and
+                    user-friendly web applications.
+                  </p>
+                  <div class="hero__scroll-hint">
+                    <span class="scroll-text">Scroll</span>
+                    <div class="scroll-line"></div>
+                  </div>
                 </div>
-                <div class="showcase__links">
-                  <a 
-                    href="https://javanmotorsgroup.com/" 
-                    target="_blank" 
+                <div class="hero__image">
+                  <img
+                    src="assets/images/sadra.png"
+                    alt="Sadra Milani - Software Developer"
+                    class="hero__photo"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="about" class="about">
+            <div class="container">
+              <h2 class="about__title">A Little About Me</h2>
+              <div class="about__container">
+                <div class="about__bio">
+                  <p class="about__description">
+                    I'm a full-stack developer passionate about crafting clean,
+                    efficient, and user-friendly web applications. I enjoy
+                    turning ideas into real products with modern tools and
+                    frameworks. My focus is on writing maintainable code,
+                    building smooth user experiences, and continuously learning
+                    new technologies. When I work on a project, I aim to blend
+                    functionality with simplicity.
+                  </p>
+                </div>
+                <div class="about__animation">
+                  <div id="lottie-animation" class="lottie-container"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="projects" class="showcase">
+            <div class="container">
+              <div class="showcase__header">
+                <h2 class="showcase__title">A Peek at My Work</h2>
+              </div>
+
+              <div class="showcase__grid">
+                <!-- Project 1: Javan Motors Group -->
+                <article class="showcase__item" data-project="javan-motors">
+                  <div class="showcase__image-container">
+                    <img
+                      src="assets/images/showcase1.png"
+                      alt="Javan Motors Group - Luxury car dealership website screenshot"
+                      class="showcase__image"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="showcase__content">
+                    <h3 class="showcase__project-title">Javan Motors Group</h3>
+                    <p class="showcase__description">
+                      A sleek website for a luxury car dealership specializing
+                      in buying and selling second-hand high-end vehicles. Built
+                      with a focus on performance and modern UI.
+                    </p>
+                    <div class="showcase__tech-stack">
+                      <span class="showcase__tech-label">Tech Stack:</span>
+                      <ul class="showcase__tech-list">
+                        <li class="showcase__tech-item">Next.js</li>
+                        <li class="showcase__tech-item">React</li>
+                        <li class="showcase__tech-item">Tailwind CSS</li>
+                      </ul>
+                    </div>
+                    <div class="showcase__links">
+                      <a
+                        href="https://javanmotorsgroup.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="showcase__link showcase__link--primary"
+                        aria-label="Visit Javan Motors Group website"
+                      >
+                        <span>View Live Site</span>
+                        <svg
+                          class="showcase__link-icon"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                          ></path>
+                          <polyline points="15,3 21,3 21,9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Project 2: The CogniLens -->
+                <article class="showcase__item" data-project="cognilens">
+                  <div class="showcase__image-container">
+                    <img
+                      src="assets/images/showcase2.png"
+                      alt="The CogniLens - Digital literacy platform website screenshot"
+                      class="showcase__image"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="showcase__content">
+                    <h3 class="showcase__project-title">The CogniLens</h3>
+                    <p class="showcase__description">
+                      A digital literacy platform providing resources and tools
+                      for online learning. Designed for accessibility and ease
+                      of content management.
+                    </p>
+                    <div class="showcase__tech-stack">
+                      <span class="showcase__tech-label">Tech Stack:</span>
+                      <ul class="showcase__tech-list">
+                        <li class="showcase__tech-item">WordPress</li>
+                        <li class="showcase__tech-item">PHP</li>
+                        <li class="showcase__tech-item">MySQL</li>
+                      </ul>
+                    </div>
+                    <div class="showcase__links">
+                      <a
+                        href="https://thecognilens.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="showcase__link showcase__link--primary"
+                        aria-label="Visit The CogniLens website"
+                      >
+                        <span>View Live Site</span>
+                        <svg
+                          class="showcase__link-icon"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                          ></path>
+                          <polyline points="15,3 21,3 21,9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Project 3: AI Role-Playing Telegram Bot -->
+                <article class="showcase__item" data-project="telegram-bot">
+                  <div class="showcase__image-container">
+                    <img
+                      src="assets/images/showcase3.png"
+                      alt="AI Role-Playing Telegram Bot - Interactive AI bot screenshot"
+                      class="showcase__image"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="showcase__content">
+                    <h3 class="showcase__project-title">
+                      AI Role-Playing Telegram Bot
+                    </h3>
+                    <p class="showcase__description">
+                      An interactive AI Telegram bot designed for role-playing
+                      scenarios, capable of generating dynamic and engaging
+                      responses in real-time. Built to experiment with
+                      conversational AI and Python-based frameworks.
+                    </p>
+                    <div class="showcase__tech-stack">
+                      <span class="showcase__tech-label">Tech Stack:</span>
+                      <ul class="showcase__tech-list">
+                        <li class="showcase__tech-item">Python</li>
+                        <li class="showcase__tech-item">Langchain</li>
+                        <li class="showcase__tech-item">aiogram</li>
+                      </ul>
+                    </div>
+                    <div class="showcase__links">
+                      <a
+                        href="https://t.me/Roleplay_Persian_Bot"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="showcase__link showcase__link--primary"
+                        aria-label="Visit AI Role-Playing Telegram Bot"
+                      >
+                        <span>Try Bot</span>
+                        <svg
+                          class="showcase__link-icon"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                          ></path>
+                          <polyline points="15,3 21,3 21,9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section id="hire" class="hire">
+            <div class="container">
+              <div class="hire__content">
+                <h2 class="hire__title">Let's Work Together</h2>
+                <p class="hire__description">
+                  I'm always excited to bring ideas to life! Whether it's building a sleek website, developing a full-stack application, or creating a custom solution, I'm ready to collaborate and make your project a success. Check out my freelance profiles and let's get started!
+                </p>
+                <div class="hire__links">
+                  <a
+                    href="https://www.fiverr.com/sellers/sadramilani"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    class="showcase__link showcase__link--primary"
-                    aria-label="Visit Javan Motors Group website"
+                    class="hire__link"
+                    aria-label="Visit Sadra's Fiverr profile"
                   >
-                    <span>View Live Site</span>
-                    <svg class="showcase__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <span class="hire__link-text">Fiverr</span>
+                    <svg
+                      class="hire__link-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15,3 21,3 21,9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.upwork.com/freelancers/~01baaeb2b8f2acce5a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hire__link"
+                    aria-label="Visit Sadra's Upwork profile"
+                  >
+                    <span class="hire__link-text">Upwork</span>
+                    <svg
+                      class="hire__link-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15,3 21,3 21,9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.freelancer.com/u/sadramilani"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hire__link"
+                    aria-label="Visit Sadra's Freelancer profile"
+                  >
+                    <span class="hire__link-text">Freelancer</span>
+                    <svg
+                      class="hire__link-icon"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
                       <polyline points="15,3 21,3 21,9"></polyline>
                       <line x1="10" y1="14" x2="21" y2="3"></line>
                     </svg>
                   </a>
                 </div>
               </div>
-            </article>
+            </div>
+          </section>
 
-            <!-- Project 2: The CogniLens -->
-            <article class="showcase__item" data-project="cognilens">
-              <div class="showcase__image-container">
-                <img 
-                  src="assets/images/showcase2.png" 
-                  alt="The CogniLens - Digital literacy platform website screenshot"
-                  class="showcase__image"
-                  loading="lazy"
-                />
-              </div>
-              <div class="showcase__content">
-                <h3 class="showcase__project-title">The CogniLens</h3>
-                <p class="showcase__description">
-                  A digital literacy platform providing resources and tools for online learning. Designed for accessibility and ease of content management.
-                </p>
-                <div class="showcase__tech-stack">
-                  <span class="showcase__tech-label">Tech Stack:</span>
-                  <ul class="showcase__tech-list">
-                    <li class="showcase__tech-item">WordPress</li>
-                    <li class="showcase__tech-item">PHP</li>
-                    <li class="showcase__tech-item">MySQL</li>
-                  </ul>
-                </div>
-                <div class="showcase__links">
-                  <a 
-                    href="https://thecognilens.com/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    class="showcase__link showcase__link--primary"
-                    aria-label="Visit The CogniLens website"
-                  >
-                    <span>View Live Site</span>
-                    <svg class="showcase__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15,3 21,3 21,9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Project 3: AI Role-Playing Telegram Bot -->
-            <article class="showcase__item" data-project="telegram-bot">
-              <div class="showcase__image-container">
-                <img 
-                  src="assets/images/showcase3.png" 
-                  alt="AI Role-Playing Telegram Bot - Interactive AI bot screenshot"
-                  class="showcase__image"
-                  loading="lazy"
-                />
-              </div>
-              <div class="showcase__content">
-                <h3 class="showcase__project-title">AI Role-Playing Telegram Bot</h3>
-                <p class="showcase__description">
-                  An interactive AI Telegram bot designed for role-playing scenarios, capable of generating dynamic and engaging responses in real-time. Built to experiment with conversational AI and Python-based frameworks.
-                </p>
-                <div class="showcase__tech-stack">
-                  <span class="showcase__tech-label">Tech Stack:</span>
-                  <ul class="showcase__tech-list">
-                    <li class="showcase__tech-item">Python</li>
-                    <li class="showcase__tech-item">Langchain</li>
-                    <li class="showcase__tech-item">aiogram</li>
-                  </ul>
-                </div>
-                <div class="showcase__links">
-                  <a 
-                    href="https://t.me/Roleplay_Persian_Bot" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    class="showcase__link showcase__link--primary"
-                    aria-label="Visit AI Role-Playing Telegram Bot"
-                  >
-                    <span>Try Bot</span>
-                    <svg class="showcase__link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15,3 21,3 21,9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <!-- Contact content will go here -->
-      </section>
+          <section id="contact">
+            <!-- Contact content will go here -->
+          </section>
         </main>
 
         <footer>

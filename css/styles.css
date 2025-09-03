@@ -292,6 +292,227 @@ html {
   }
 }
 
+/* ===== HIRE SECTION ===== */
+.hire {
+  padding: 5rem 0;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.hire__content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hire__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hire__title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hire__description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition-delay: 0.2s;
+}
+
+.hire__description.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hire__links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hire__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 2px solid var(--text-secondary);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  position: relative;
+  overflow: hidden;
+}
+
+.hire__link:nth-child(1) {
+  transition-delay: 0.4s;
+}
+
+.hire__link:nth-child(2) {
+  transition-delay: 0.5s;
+}
+
+.hire__link:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+.hire__link.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hire__link:hover {
+  background: var(--text-secondary);
+  color: var(--bg-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hire__link-text {
+  font-weight: 600;
+}
+
+.hire__link-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.hire__link:hover .hire__link-icon {
+  transform: translateX(3px);
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .hire {
+    padding: 5rem 0;
+  }
+
+  .hire__title {
+    font-size: 2rem;
+  }
+
+  .hire__description {
+    font-size: 1.1rem;
+  }
+
+  .hire__links {
+    gap: 2.5rem;
+  }
+
+  .hire__link {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .hire {
+    padding: 6rem 0;
+  }
+
+  .hire__title {
+    font-size: 2.2rem;
+  }
+
+  .hire__description {
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+  }
+
+  .hire__links {
+    gap: 3rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .hire {
+    padding: 4rem 0;
+  }
+
+  .hire__title {
+    font-size: 1.8rem;
+  }
+
+  .hire__description {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hire__links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .hire__link {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .hire__title,
+  .hire__description,
+  .hire__link {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hire__link:hover {
+    transform: none;
+  }
+
+  .hire__link:hover .hire__link-icon {
+    transform: none;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .hire__title {
+    color: #000;
+  }
+
+  .hire__description {
+    color: #333;
+  }
+
+  .hire__link {
+    border: 3px solid var(--text-primary);
+    color: var(--text-primary);
+  }
+
+  .hire__link:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+  }
+}
+
 /* ===== SHOWCASE SECTION ===== */
 .showcase {
   padding: 4rem 0;
@@ -531,6 +752,19 @@ html {
 
 /* Large Desktop Styles */
 @media (min-width: 1200px) {
+  .hire__title {
+    font-size: 2.2rem;
+  }
+
+  .hire__description {
+    font-size: 1.1rem;
+  }
+
+  .hire__link {
+    padding: 1.4rem 3.5rem;
+    font-size: 1.3rem;
+  }
+
   .showcase__title {
     font-size: 2.2rem;
   }
